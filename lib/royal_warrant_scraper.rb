@@ -2,6 +2,7 @@
 
 require 'nokogiri'
 require 'net/http'
+require_relative 'royal_warrant_entry.rb'
 
 class RoyalWarrantScraper 
   #class for scraping RoyalWarrantEntries from Royal Warrant site
@@ -26,6 +27,7 @@ class RoyalWarrantScraper
                                                    "trade"   => trade,
                                                    "region"  => region})
                                                   .body)
+    @response.css("div")[1]
   end
 
   private 
@@ -35,28 +37,6 @@ class RoyalWarrantScraper
   end 
 end 
 
-class RoyalWarrantEntry
-  #defines an entry on the RoyalWarrant site 
 
-  attr_accessor :name, :description, :phone, :fax, :email, :website
-
-  def initialize(name,
-                 description,
-                 phone,
-                 fax,
-                 email, 
-                 website)
-    :name = name
-    :description = description
-    :phone = phone
-    :fax = fax
-    :email = email
-    :website = website
-  end
-
-  def to_s
-    "#{@name}\n#{@description}\n#{@phone}\n#{fax}\n#{email}\n#{website}"
-  end
-end 
 
 

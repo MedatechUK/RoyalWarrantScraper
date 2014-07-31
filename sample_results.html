@@ -1,0 +1,1610 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+	<head>
+		<title>Public Directory Search</title>
+		<link href="default.css" rel="stylesheet" type="text/css" media="screen">
+	</head>
+
+	<body style="border:none;">
+
+
+			
+		<div style="padding:9px; border-bottom: solid 0px #4fa2c4; color:#fff; background-color:#57b6dd;">
+			<div style="float:left; width:250px; padding-right:9px;">
+
+				<h2><strong>Public Directory</strong></h2>
+				<h3>You can search the Royal Warrant Holders Association database through a combination of entering Keywords and selecting from the Grantor, Trade Category, or Region menus as appropriate.<br><br>Click <a href="RWHA_Public_Start.php"><span style="font-size:90%">here</span></a> to perform a brand new search.</h3>
+			 </div>
+			  <div>
+
+				<!-- ****** FILTER RESULTS ****** -->
+
+				Please enter your search criteria.<br><br>
+
+				<form action="RWHA_Public_Search.php" method="post" id="public-search">
+					<table>
+						<tr>
+							<td colspan="2">
+								<span style="font-size:90%;">Keywords:</span>
+								<input type="text" name="q" value="" style="border:none;
+											width:300px;
+											height:30px;
+											padding:3px 0 0 10px;
+											background:url(images/search-keyword.gif) no-repeat;
+											margin:0 0 15px 0;
+											display:inline-block;
+											color:#666;">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<!-- Grantor -->
+								<span style="font-size:90%;">Grantor:</span>
+							</td>
+							<td>
+								<select name="grantor">
+								<option>-All-</option>
+									<option value="-All-">-All-</option>
+									<option value="HM The Queen - Master of the Household">HM The Queen - Master of the Household</option>
+									<option value="HM The Queen - Privy Purse">HM The Queen - Privy Purse</option>
+									<option value="HM The Queen - Royal Collection Department">HM The Queen - Royal Collection Department</option>
+									<option value="HM The Queen - The Lord Chamberlains Office">HM The Queen - The Lord Chamberlains Office</option>
+									<option value="HM The Queen - The Royal Mews">HM The Queen - The Royal Mews</option>
+									<option value="HRH The Duke of Edinburgh">HRH The Duke of Edinburgh</option>
+									<option value="HRH The Prince of Wales">HRH The Prince of Wales</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<!-- Trade Category -->
+								<span style="font-size:90%;">Trade Category:</span>
+							</td>
+							<td>
+								<select name="trade">
+								<option>Agricultural Services</option>
+									<option value="-All-">-All-</option>
+									<option value="Agricultural Services">Agricultural Services</option>
+									<option value="Animal Welfare">Animal Welfare</option>
+									<option value="Antiques and Works of Art">Antiques and Works of Art</option>
+									<option value="Antiques and Works of Art;Conservation and Restoration">Antiques and Works of Art;Conservation and Restoration</option>
+									<option value="Apparel, Clothing &amp; Leathergoods">Apparel, Clothing &amp; Leathergoods</option>
+									<option value="Apparel, Clothing &amp; Leathergoods;Household Goods">Apparel, Clothing &amp; Leathergoods;Household Goods</option>
+									<option value="Beverages">Beverages</option>
+									<option value="Beverages;Food Suppliers and Services">Beverages;Food Suppliers and Services</option>
+									<option value="Building Services">Building Services</option>
+									<option value="China, Porcelain &amp; Tableware">China, Porcelain &amp; Tableware</option>
+									<option value="Cleaning Services">Cleaning Services</option>
+									<option value="Clockmakers,Gold/Silversmiths, Jewellers">Clockmakers,Gold/Silversmiths, Jewellers</option>
+									<option value="Commercial Artists and Illustrators">Commercial Artists and Illustrators</option>
+									<option value="Computing">Computing</option>
+									<option value="Conservation and Restoration">Conservation and Restoration</option>
+									<option value="Cosmetics, Health &amp; Beauty Products">Cosmetics, Health &amp; Beauty Products</option>
+									<option value="Crystal and Glassware">Crystal and Glassware</option>
+									<option value="Electrical &amp; Mechanical Engineers">Electrical &amp; Mechanical Engineers</option>
+									<option value="Electronic Equipment - Commercial">Electronic Equipment - Commercial</option>
+									<option value="Electronic Equipment - Consumer">Electronic Equipment - Consumer</option>
+									<option value="Environmental Systems">Environmental Systems</option>
+									<option value="External Catering &amp; Hospitality Services">External Catering &amp; Hospitality Services</option>
+									<option value="Flags, Medals &amp; Insignia">Flags, Medals &amp; Insignia</option>
+									<option value="Food Suppliers and Services">Food Suppliers and Services</option>
+									<option value="Food Suppliers and Services;Household Goods">Food Suppliers and Services;Household Goods</option>
+									<option value="Furnishings">Furnishings</option>
+									<option value="Furnishings;Furniture">Furnishings;Furniture</option>
+									<option value="Furniture">Furniture</option>
+									<option value="Giftware, Fancy Goods &amp; Novelties">Giftware, Fancy Goods &amp; Novelties</option>
+									<option value="Hairdressing">Hairdressing</option>
+									<option value="Hardware &amp; Ironmongery">Hardware &amp; Ironmongery</option>
+									<option value="Health &amp; Safety Equipment">Health &amp; Safety Equipment</option>
+									<option value="Horticultural Specialists">Horticultural Specialists</option>
+									<option value="Household Goods">Household Goods</option>
+									<option value="Lighting Specialists">Lighting Specialists</option>
+									<option value="Medical Suppliers &amp; Pharmacies">Medical Suppliers &amp; Pharmacies</option>
+									<option value="Musical Instruments">Musical Instruments</option>
+									<option value="Opticians">Opticians</option>
+									<option value="Pest and Vermin Controllers">Pest and Vermin Controllers</option>
+									<option value="Photographers">Photographers</option>
+									<option value="Printers &amp; Reprographic Services">Printers &amp; Reprographic Services</option>
+									<option value="Printers &amp; Reprographic Services;Stationery">Printers &amp; Reprographic Services;Stationery</option>
+									<option value="Publishing">Publishing</option>
+									<option value="Removals and Storage">Removals and Storage</option>
+									<option value="Sports, Hobbies, Pursuits &amp; Pastimes">Sports, Hobbies, Pursuits &amp; Pastimes</option>
+									<option value="Stationery">Stationery</option>
+									<option value="Telecommunications">Telecommunications</option>
+									<option value="Timber Merchants">Timber Merchants</option>
+									<option value="Transport - Industrial">Transport - Industrial</option>
+									<option value="Transport - Industrial;Transport - Services">Transport - Industrial;Transport - Services</option>
+									<option value="Transport - Motorised">Transport - Motorised</option>
+									<option value="Transport - Non motorised">Transport - Non motorised</option>
+									<option value="Transport - Services">Transport - Services</option>
+								</select>
+							</td>
+
+						</tr>
+						<tr>
+							<td>
+								<!-- Region -->
+								<span style="font-size:90%;">Region:</span>
+							</td>
+							<td>
+								<select name="region">
+								<option>-All-</option>
+									<option value="-All-">-All-</option>
+									<option value="East Anglia">East Anglia</option>
+									<option value="Eire">Eire</option>
+									<option value="Europe">Europe</option>
+									<option value="London">London</option>
+									<option value="North East">North East</option>
+									<option value="North West">North West</option>
+									<option value="Northern Ireland">Northern Ireland</option>
+									<option value="Rest of the World">Rest of the World</option>
+									<option value="Scotland">Scotland</option>
+									<option value="South East">South East</option>
+									<option value="South West">South West</option>
+									<option value="Wales">Wales</option>
+									<option value="West Midlands">West Midlands</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="submit" value="Search" style="border:none;
+										width:90px;
+										height:30px;
+										padding:0px;
+										cursor:pointer;
+										padding:0px 15px 0 0;
+										text-align:right;
+										background:url(images/dirBtn.gif) no-repeat;
+										display:inline-block;
+										font-size:90%;
+										float:right;">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	<div style="padding:9px;">
+	
+	<div style="font-size:120%; color:#444; text-align:left;">Results of your search:</div>
+
+		<table border="0">
+		
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Agco Limited</h2>
+				<div style="font-size:90%;">
+				With over 100 years experience in agriculture, AGCO has become a world leader in manufacturing, marketing and distributing agricultural equipment in over 140 countries throughout the world. AGCO is committed to cultivating worldwide relationships and has a brand heritage which is led by four core global brands - Massey Ferguson, Valtra, Challenger and Fendt.
+
+Our trusted brands, expert dealers and huge range of reliable products make AGCO a valuable partner for farmers around the world.
+
+At AGCO, we listen to the needs of our customers and dealers, create solutions for them, and aim to exceed their expectations. Our employees are the most knowledgeable and well trained in the industry and work together to achieve our goals.
+
+While we continue to deliver quality agricultural solutions, we take our environmental responsibility very seriously and are constantly seeking to protect the natural environment from harmful influences, conserve natural resources and promote environmental awareness.
+
+At AGCO, our vision is to provide high-tech solutions for professional farmers feeding the world.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>024 7669 4400</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>024 768 52495</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:"></a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.agcocorp.com" target="_blank">www.agcocorp.com</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKMpnAAG" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKMpnAAG" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Manufacturers of Agricultural Machinery</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1956</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Stanton Hope Ltd</h2>
+				<div style="font-size:90%;">
+				Specialist suppliers of quality tools and equipment to the Forestry, Arboricultural, Landscaping and Conservation markets, including hand tools, chainsaws, brushcutters, hedgetrimmers, protective clothing, sprayers, fencing tools, tree guards and ties etc.  Established for over 50 years, we have a wealth of experience in supplying quality products.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01268 419141</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01268 545992</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:sales@stantonhope.co.uk">sales@stantonhope.co.uk</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.stantonhope.co.uk" target="_blank">www.stantonhope.co.uk</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKMsbAAG" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKMsbAAG" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Suppliers of Forestry Equipment</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1968</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>John Deere Ltd</h2>
+				<div style="font-size:90%;">
+				Suppliers of agricultural, groundscare and horticultural equipment<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01949 860491</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01949 860490</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:31enquiries@johndeere.com">31enquiries@johndeere.com</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.johndeere.co.uk" target="_blank">www.johndeere.co.uk</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKMvoAAG" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKMvoAAG" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Suppliers of Agricultural, Groundscare &amp; Horticultural Equipment</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1970</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Bayer Cropscience Ltd</h2>
+				<div style="font-size:90%;">
+				Bayer CropScience is dedicated to developing and marketing solutions for the safeguarding of crops.  This ranges from the protection from pests, diseases and weeds to our outstanding service and product portfolio for the treatment of seeds.  With its four business units, Insecticides, Herbicides, Fungicides and Seed Treatment, Bayer CropScience is fully committed to meet its customers' needs.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01223 226500</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:"></a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://" target="_blank"></a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKMz0AAG" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKMz0AAG" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Manufacturers of Agricultural Chemicals</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1974</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Robert H. Crawford &amp; Son</h2>
+				<div style="font-size:90%;">
+				Robert H Crawford &amp; Son established 1921 is third generation family business selling, manufacturing and repairing agricultural and horticultural equipment. Main agents for McCormick, Dowdeswell, Countax, Husqvarna, Echo, Mountfield, Hayter and Flymo.
+
+The agricultural department sells a full range of McCormick tractors from 28Hp to 280Hp. All types of new and second hand tractors specialising in crawler tractors As well as new and second hand farm machinery. The grass care department caters for domestic and commercial enterprises. We have an extensive stock of mowers and compact tractors new and second hand.  The Hire department has tractors from 15Hp to 280Hp, mowing equipment and mini diggers etc. Long or short term hire.
+
+The large agricultural / horticultural service department provides expert qualified service facilities, backed by a comprehensive range of spare parts for all leading makes. We operate a collection and delivery service throughout Lincolnshire.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01205 750367</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01205 750369</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:sales@rhcrawford.com">sales@rhcrawford.com</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.rhcrawford.com" target="_blank">www.rhcrawford.com</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKMzYAAW" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKMzYAAW" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Suppliers of Agricultural Machinery</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1976</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Fen Ditching Company Limited</h2>
+				<div style="font-size:90%;">
+				Fen Ditching Company specialise in drainage and watercourse maintenance works. This includes ditching and drain clearance, vegetation and weed removal and the fabrication and installation of water control structures, sluices weirs etc. We also undertake the dredging works,the building of new irrigation reservoirs lakes and ponds and the creation of wildlife habitat and wetland schemes. Fen ditching have an extensive fleet of standard and specialist plant for hire including long reach excavators and low ground pressure dump trucks.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01945 860318</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:paul@fenditching.co.uk">paul@fenditching.co.uk</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.fenditching.co.uk" target="_blank">www.fenditching.co.uk</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN0VAAW" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN0VAAW" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Land Drainage Contractors</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1979</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>J.C. Bamford Excavators Ltd</h2>
+				<div style="font-size:90%;">
+				Construction and agriculture machinery<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01889 590312</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:bla@jcb.com">bla@jcb.com</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.jcb.com" target="_blank">www.jcb.com</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN1tAAG" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN1tAAG" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Manufacturers of Construction &amp; Agricultural Equipment</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1982</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Mcarthur Group Ltd</h2>
+				<div style="font-size:90%;">
+				For nearly 170 years five successive generations of the McArthur family have skilfully developed the Company into what is now one of the largest family-run businesses in the UK.  Today, the McArthur Group is a major distributor of products to the Building and Agricultural trades, and also has three manufacturing plants producing fencing and gates.
+
+The Group's Royal Warrant was awarded for the provision of Wire Fencing and Ironmongery, but the Company also supplies a wide range of other merchandise, including fasteners, garage doors, lintels, steel, and roofing products for the Building sector.  It also supplies the Agricultural sector with fencing, hardware and silage products, to name a few.  A full portfolio for the McArthur Group, including a comprehensive range of industrial fencing, can be viewed on its website www.mcarthur-group.com.
+
+There are 12 regional supply centres, ideally located to provide national coverage, with timely delivery of goods on the Group's own fleet of vehicles.  Most of the products sold are available from stock for immediate delivery.The McArthur Group is proud of its reputation for providing first class service and free advice to its customers, continually ensuring that its salesforce is fully trained in the Group's latest products.  It is a traditional company with traditional values.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>0117 9430500</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>0870 2384486</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:marketing@mcarthur-group.com">marketing@mcarthur-group.com</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.mcarthur-group.com" target="_blank">www.mcarthur-group.com</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN5IAAW" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN5IAAW" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Suppliers of Fencing Wire Products &amp; Ironmongery</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1988</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Yara UK Limited</h2>
+				<div style="font-size:90%;">
+				Bagging, blending, storage, and distribution of solid fertilizers. 
+
+Manufacture, storage and distribution of liquid fertilizers.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01472 889250</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01472 889251</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:"></a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.yara.co.uk" target="_blank">www.yara.co.uk</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN4rAAG" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN4rAAG" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Manufacturer of Agricultural Fertilisers</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1987</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Berthoud Sprayers Ltd</h2>
+				<div style="font-size:90%;">
+				Berthoud have been building crop sprayers for over 100 years, earning an enviable reputation for the manufacture of high quality, high accuracy machines. Berthoud build over 3,000 units per year, and still lead the industry with innovative design and development of advanced chemical application technology.
+
+Berthoud's experience enables us to supply the farmer and contractor with correctly engineered, thoroughly tested machines that are easy to operate, highly reliable, consistently accurate and above all, very affordable. The products range from Knapsack Sprayers through Mounted, Trailed and Self Propelled machines, Air-Blast and Pneumatics, Berthoud are at the forefront of crop sprayer production.
+
+Because we design the total sprayer (and not just assemble components), we have the control to ensure that your sprayer will not only achieve optimum application rates without wastage, but will also provide many years of trouble-free operation.
+
+Take a closer look at our product range by visiting our website for full technical specifications.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01553 774997</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01553 772965</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:sales@berthoud.co.uk">sales@berthoud.co.uk</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.berthoud.co.uk" target="_blank">www.berthoud.co.uk</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN59AAG" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN59AAG" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Manufacturers of Agricultural Crop Sprayers</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1988</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Ben Burgess &amp; Company</h2>
+				<div style="font-size:90%;">
+				Ben Burgess and Company, founded by Ben Burgess, Edward Burgess and Norman Marshall, have been serving the Norfolk and Suffolk farming community since 1931, and supplying horticultural machines since 1962. We began supplying the Royal Estate at Sandringham with Marshall tractors in 1932 and have continued to the present day, currently supplying John Deere equipment. 
+
+Ben Burgess are one of the four original dealers from when John Deere entered the UK market in 1965. The Ben Burgess name has become closely associated with John Deere, Manitou and Hitachi along with several other leading manufacturers in the fields of Agriculture, Horticulture and Construction.
+
+The values central to the success of our company have always been Customer Satisfaction and Product Support. This has been achieved by having a sales force numbering 20, all specialising in various fields of expertise. They are backed up with the support of around 40 highly trained technicians.
+
+To give our customers the coverage and fast response times that they need we have four depots in East Anglia covering Norfolk, Suffolk, Cambridgeshire and Essex.
+
+We also specialise in Agricultural machinery export and
+Construction machinery export to anywhere in the World.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01603 628251</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01603 762194</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:benturner@benburgess.co.uk">benturner@benburgess.co.uk</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.benburgess.co.uk" target="_blank">www.benburgess.co.uk</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN5BAAW" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN5BAAW" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Suppliers of Agricultural Machinery</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1988</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Fullwood Ltd</h2>
+				<div style="font-size:90%;">
+				Designer, manufacturer and supplier of innovative milking and cooling solutions for today's dairy farmer.  Fullwood have a range of equipment from simple direct to line systems, herringbone parlours, through to rapid exits and rotaries for the larger herds.  By using a modular approach, Fullwood's Crystal herd management software has the ability to control and automate all processes on the dairy farm, optimising the dairy herd management routine.
+
+At the forefront of technology, the Merlin Automated Milking System gives freedom from the milking parlour and allows the farmer the choice of how to spend the day. This robotic system milks cows all by itself, so allowing the farmer the flexibility to concentrate on the many other important tasks around the farm.  The cows can choose when to be milked, day or night and with no more standing for long periods in collecting yards, they can use the time more productively for eating or resting.  Merlin milked cows are altogether quieter and happier animals.
+
+Fullwood Limited is one of 12 companies in the Fullwood Packo Group employing over 600 people worldwide.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01691 627391</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01691 627358</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:sales@fullwood.com">sales@fullwood.com</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.fullwood.com" target="_blank">www.fullwood.com</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN6FAAW" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN6FAAW" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Dairy Equipment Manufacturers</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1990</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Oliver &amp; Lang Brown</h2>
+				<div style="font-size:90%;">
+				Established in 1965, Oliver &amp; Lang Brown is a small family run firm offering forestry management and contracting sevices in Somerset, Dorset, Wiltshire and Gloucestershire. We are also able to undertake work further afield and have clients in East Anglia and South East England.
+
+Our main activities are the management of woodlands on farms and the smaller estates. This service includes drawing up proposals for woodland operations on behalf of woodland owners and submitting grant applications to the Forestry Commission towards funding for managing existing woods and also new planting. We also undertake hedge planting and smaller tree planting schemes. We are able to supply top quality native trees,shrubs and hedging for customers wishing to do their own planting. Wherever possible we source planting stock from West Country nurseries.
+
+We consider it very important to run our business in an environmentally responsible manner.  In planting schemes we use biodegadable planting materials such as tree shelters, mulch mats etc.\r\nWhen drawing up management plans for woodlands the prescriptions we incorporate are aimed to have a minimal visual and ecological effect on the woodalnds and surrounding  landscape.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01749 812244</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01749 813555</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:pmunford@pavilion.co.uk">pmunford@pavilion.co.uk</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://" target="_blank"></a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN6fAAG" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN6fAAG" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/POW_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Forestry Contractors</strong><br>
+						HRH The Prince of Wales<br><br>
+						<span style="font-size:80%;">Granted in 1990</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>H.L. Hutchinson Ltd</h2>
+				<div style="font-size:90%;">
+				Hutchinsons is a crop production specialist business working with farmers, horticulturalists and the amenity sector.  Hutchinsons supply and distribute a wide range of products to growers which include crop protection products, fertiliser, seed and speciality materials including beneficial insects.  Customer relationships are built on trust and responsibility where their personal Agronomist helps them grow high quality and high yielding crops to meet the end market need.
+
+Hutchinsons also provide an extensive range of services to their customers to assist in the management of various plans and compliance with audits.  There has been a growing demand for such support, as farmers try to balance the activities of practical farming with the complexities of management and compliance with the many schemes farming is subjected to. Hutchinsons have designed and introduced several IT programmes that their agronomists use with customers to manage fertiliser, manures, nutrient plans and ensure compliance with auditor schemes.
+
+There is a parallel requirement to help farmers manage the countryside and environment of which they are the custodians.  Hutchinsons agronomists hold professional qualifications so that they are able to advise on both crop production and crop protection products. These are combined with environmental qualifications so they can protect wildlife and enhance biodiversity on the client farms where they work.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01945 461177</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01945 474837</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:information@hlhltd.co.uk">information@hlhltd.co.uk</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.hutchinsons-online.co.uk" target="_blank">www.hutchinsons-online.co.uk</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN7PAAW" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN7PAAW" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Crop Production Specialists</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1992</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Castle Plant (Deeside) Ltd</h2>
+				<div style="font-size:90%;">
+				Plant hire contractors
+Forestry roads
+Sand and gravel quarry
+Ground preparation for forestry planting<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>013397 56070</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>013397 56070</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:barytesmining@btconnect.com">barytesmining@btconnect.com</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://" target="_blank"></a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN9NAAW" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN9NAAW" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+						
+							<img src="arms/SCOTTISH_arms.gif">
+
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Plant Hire Contractors</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1996</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Bunn Fertiliser Limited</h2>
+				<div style="font-size:90%;">
+				Enter details here. Established in 1816 as Agriculural,Animal Feed and Fertiliser Merchants at Gt. Yarmouth in Norfolk, J &amp; H Bunn Ltd. has developed to become the largest independant manufacturer and supplier of Fertiliser in the UK. With Factories from Scotland to Cornwall we produce in excess of 500,000 tonnes annually. We are both AIC members and FIAS accredited.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>0845 166 2222</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>0845 080 5454</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:info@bunnfertiliser.com">info@bunnfertiliser.com</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.bunnfertiliser.com" target="_blank">www.bunnfertiliser.com</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN9hAAG" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKN9hAAG" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Manufacturers of Agricultural Fertilisers</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 1996</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Winterborne Zelston Fencing Ltd</h2>
+				<div style="font-size:90%;">
+				WZF is a company that specialises in the Arcadian framework of the English countryside and the products and projects are reflected by the use of England's traditional raw materials - viz:- Hardwoods, stone, iron, reed, hazel etc.  The Coppiceware transgresses across landed estates, gardens and the countryside, so the estate agents, gardeners, farmers and architects all have need at some time of the products.
+
+All products are handmade using traditional tools and are subject to british standards, where applicable.  All timbers come from FSC Woodlands.
+
+In particular the 'world of cleft' is renowned for:-
+
+Traditional hand made gates
+Cleft fencing and accessories
+Iron fencing and accessories
+Projects ie/ boat houses, chicken houses, bridges
+
+For further information please send for a brochure.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01929 459245</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01929 459011</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:wzfencing@btinternet.com">wzfencing@btinternet.com</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://" target="_blank"></a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKNNwAAO" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKNNwAAO" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/POW_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Mf. of Trad. Cleft Estate Fencing and Gates</strong><br>
+						HRH The Prince of Wales<br><br>
+						<span style="font-size:80%;">Granted in 2000</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Enidvale Limited T/A B.K. Grain Handling Engineers</h2>
+				<div style="font-size:90%;">
+				Specialists in the planning installation and maintenance of grain handling and milling machinery.
+
+Steel framed buildings and fabrication.
+
+Design-all turnkey projects and modifications to existing plants are fully designed on Autocad and comply with CDM and health and safety requirements<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01488 684154</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01488 684455</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:reception@bkgrain.co.uk">reception@bkgrain.co.uk</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.bkgrain.co.uk" target="_blank">www.bkgrain.co.uk</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKNR6AAO" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKNR6AAO" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Agricultural Engineers - Specialists in Grain Handling</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 2007</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">&nbsp;</td>
+		</tr>
+
+	
+		<tr>
+			<td style="width:60%; min-height:100%; vertical-align:top; padding-right:9px;">
+				<h2>Vigo Limited</h2>
+				<div style="font-size:90%;">
+				Vigo Limited supplies products and services to drink producers, ranging from small scale domestic equipment to fully automated production lines.
+
+Vigo has extensive experience in the field of winemaking, apple juice and cider production and in bottling lines for a wide range of beverages including apple juice, cider, wine, beer, water and vegetable oils.
+
+Products range from hardware to consumables. Specialist fileds include pasteurisation, bottle filling and labelling equipment.
+
+The equipment we offer is supported by a team of multi-skilled engineers and a well-equipped engineering workshop. Vigo offers a comprehensive after-sales service.<br><br>
+
+				<table style="width:100%; font-size:90%;">
+					<tr>
+						<td style="width:60px;">Phone:</td>
+						<td>01404 890262</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>01404 890263</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><a href="mailto:info@vigoltd.com">info@vigoltd.com</a></td>
+					</tr>
+					<tr>
+						<td>Website:</td>
+						<td><a href="http://www.vigoltd.com" target="_blank">www.vigoltd.com</a></td>
+					</tr>
+				</table>
+				<br><br>
+
+				<table style="width:100%;">
+				<tr>
+				<td style="width:15px;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKNS3AAO" style="text-decoration:none;">
+					<img src="images/btnNext.png" style="border:none; height:20px; width:9px;"></a><br>
+				</td>
+				<td style="min-height:100%; vertical-align:middle; font-size:90%;">
+					<a href="RWHA_Public_Search_Detail.php?companyid=0013000000uKNS3AAO" style="text-decoration:none;">
+					more details...</a><br>
+				</td>
+
+				</tr>
+				</table>
+
+
+				</div>
+			</td>
+			<td style="width:40%; min-height:100%; vertical-align:top;">
+			<div style="text-align:center; font-size:110%; padding-bottom:5px;">Warrants Held</div>
+
+								<table border="0" style="width:100%; background-color:#fff; padding:10px 0px 5px 0px; min-height:100%; vertical-align:top;">
+				<!-- Insert the correct crest -->
+				<tr>
+					<td style="width:20%;">
+						
+															<img src="arms/QUEEN_arms.gif">
+												</td>
+
+					<!--  Insert the warrant detail -->
+					<td style="width:80%;">
+						<strong>Suppliers of Fruit Juicing Equipment</strong><br>
+						HM The Queen - Privy Purse<br><br>
+						<span style="font-size:80%;">Granted in 2008</span><br>
+					</td>
+				</tr>
+				</table>
+				<br>
+				
+		</td>
+		</tr>
+
+		<tr>
+				<td colspan="2" style="border-top:solid 2px #ddd; width:100%">
