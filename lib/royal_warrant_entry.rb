@@ -15,4 +15,8 @@ class RoyalWarrantEntry
   def to_s
     "#{@name}\n#{@description}\n#{@phone}\n#{fax}\n#{email}\n#{website}"
   end
+
+  def to_a
+    [@name, @description, @phone, @fax, @email, @website]
+  end
 end 

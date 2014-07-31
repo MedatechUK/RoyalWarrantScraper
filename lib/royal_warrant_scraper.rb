@@ -33,7 +33,7 @@ class RoyalWarrantScraper
     search_results.xpath("tr").each do |tr|
       next if tr.css("h2").size == 0 
       name = tr.css("h2").text
-      description = tr.css("div")[0].xpath("text()").to_s.strip!
+      description = tr.css("div")[0].xpath("text()").to_s.strip!.gsub!("\n", "<break>")
       phone = tr.xpath(".//td[text() = 'Phone:']")[0].next_element.text
       fax = tr.xpath(".//td[text() = 'Fax:']")[0].next_element.text
       email = tr.xpath(".//td[text() = 'Email:']")[0].next_element.text
