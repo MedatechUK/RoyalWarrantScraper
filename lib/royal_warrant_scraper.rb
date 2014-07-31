@@ -32,23 +32,24 @@ class RoyalWarrantScraper
     
     search_results.xpath("tr").each do |tr|
       next if tr.css("h2").size == 0 
-      header = tr.css("h2").text
-      des = tr.css("div")[0].xpath("text()").to_s.strip!
+      name = tr.css("h2").text
+      description = tr.css("div")[0].xpath("text()").to_s.strip!
       phone = tr.xpath(".//td[text() = 'Phone:']")[0].next_element.text
       fax = tr.xpath(".//td[text() = 'Fax:']")[0].next_element.text
       email = tr.xpath(".//td[text() = 'Email:']")[0].next_element.text
       website = tr.xpath(".//td[text() = 'Website:']")[0].next_element.text
 
-      puts "header: #{header}"
-      puts "des: #{des[0, 11]}" 
-      puts "phone: #{phone}"
-      puts "fax: #{fax}"
-      puts "email: #{email}"
-      puts "website: #{website}"
 
-      #puts tr
+      royal_warrant_holders << RoyalWarrantEntry.new(name, 
+                                                     description, 
+                                                     phone, 
+                                                     fax, 
+                                                     email, 
+                                                     website)
 
     end
+
+    royal_warrant_holders
   end
 
   private 
