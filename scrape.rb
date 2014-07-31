@@ -10,6 +10,4 @@ end
 
 rws = RoyalWarrantScraper.new 
 
-rws.scrape()
-puts rws.response
-puts rws.response.class
+puts rws.scrape()

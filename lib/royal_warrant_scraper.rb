@@ -17,17 +17,38 @@ class RoyalWarrantScraper
 
   def scrape(q="", grantor="-All-", trade="-All-", region="-All-")
     trade = @trades[2]
-    puts q, grantor, trade, region
-    
-    
-
+  
     @response = Nokogiri::HTML(Net::HTTP.post_form(URI.parse(@url),
                                                   {"q"       => q, 
                                                    "grantor" => grantor,
                                                    "trade"   => trade,
                                                    "region"  => region})
                                                   .body)
-    @response.css("div")[1]
+
+    #look for the div with results text, grab the proceeding table element
+    search_results = @response.xpath("//div[text() = 'Results of your search:']")[0].next_element
+    
+    royal_warrant_holders = [] 
+    
+    search_results.xpath("tr").each do |tr|
+      next if tr.css("h2").size == 0 
+      header = tr.css("h2").text
+      des = tr.css("div")[0].xpath("text()").to_s.strip!
+      phone = tr.xpath(".//td[text() = 'Phone:']")[0].next_element.text
+      fax = tr.xpath(".//td[text() = 'Fax:']")[0].next_element.text
+      email = tr.xpath(".//td[text() = 'Email:']")[0].next_element.text
+      website = tr.xpath(".//td[text() = 'Website:']")[0].next_element.text
+
+      puts "header: #{header}"
+      puts "des: #{des[0, 11]}" 
+      puts "phone: #{phone}"
+      puts "fax: #{fax}"
+      puts "email: #{email}"
+      puts "website: #{website}"
+
+      #puts tr
+
+    end
   end
 
   private 
