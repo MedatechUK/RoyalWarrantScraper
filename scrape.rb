@@ -8,17 +8,6 @@ class String
   end 
 end 
 
-def write_to_csv(file_path, entries)
-  CSV.open(file_path, "w", 
-           write_headers: true, 
-           headers: ["name", "description", "phone", "fax", "email", "website"]
-           ) do |csv|
-    entries.each { |entry| csv << entry.to_a }
-  end
-end 
-
 rws = RoyalWarrantScraper.new 
 
-
-
-write_to_csv("test.csv", rws.scrape())
+rws.scrape_to_csv("test.csv", "", "-All-", "-All-", "-All-")
