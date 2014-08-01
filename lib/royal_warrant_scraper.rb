@@ -48,15 +48,28 @@ class RoyalWarrantScraper
                                                      website)
 
     end
-
     royal_warrant_holders
   end
+
+  def scrape_to_csv(file_path, q="", grantor="-All-", trade="-All-", region="-All-")
+    write_to_csv(file_path, scrape(q, grantor, trade, region))
+  end 
+ 
 
   private 
   def get_trades
     @response = Nokogiri::HTML(Net::HTTP.get_response(URI.parse(@url)).body)
     @response.css("select[name='trade']/option").each { |option| @trades << option["value"] }    
   end 
+
+  def write_to_csv(file_path, entries)
+    CSV.open(file_path, "w", 
+             write_headers: true, 
+             headers: ["name", "description", "phone", "fax", "email", "website"]
+             ) do |csv|
+      entries.each { |entry| csv << entry.to_a }
+    end
+  end   
 end 
 
 

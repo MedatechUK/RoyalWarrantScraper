@@ -13,7 +13,8 @@ class RoyalWarrantEntry
   end
 
   def to_s
-    "#{@name}\n#{@description}\n#{@phone}\n#{fax}\n#{email}\n#{website}"
+    "name: #{@name}\ndescription: #{@description}\nphone:
+     #{@phone}\nfax: #{fax}\nemail: #{email}\nwebsite: #{website}"
   end
 
   def to_a
