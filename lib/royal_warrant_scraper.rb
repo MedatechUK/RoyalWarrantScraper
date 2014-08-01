@@ -6,7 +6,7 @@ require_relative 'royal_warrant_entry.rb'
 
 class RoyalWarrantScraper 
   #class for scraping RoyalWarrantEntries from Royal Warrant site
-  attr_reader :url, :params, :response
+  attr_reader :url, :params, :response, :trades
 
   def initialize
     #frame wrapped by the official search page
@@ -16,7 +16,7 @@ class RoyalWarrantScraper
   end
 
   def scrape(q="", grantor="-All-", trade="-All-", region="-All-")
-    trade = @trades[2]
+
   
     @response = Nokogiri::HTML(Net::HTTP.post_form(URI.parse(@url),
                                                   {"q"       => q, 
