@@ -11,3 +11,5 @@ end
 rws = RoyalWarrantScraper.new 
 
 rws.scrape_to_csv("test.csv", "", "-All-", rws.trades[2], "-All-")
+
+

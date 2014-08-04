@@ -6,7 +6,7 @@ require_relative 'royal_warrant_entry.rb'
 
 class RoyalWarrantScraper
   #class for scraping RoyalWarrantEntries from Royal Warrant site
-  attr_reader :url, :params, :response, :trades
+  attr_reader :url, :params, :trades
 
   def initialize
     #frame wrapped by the official search page
