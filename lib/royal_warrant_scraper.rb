@@ -15,7 +15,10 @@ class RoyalWarrantScraper
     get_trades
   end
 
-  def scrape(q="", grantor="-All-", trade="-All-", region="-All-")
+  def scrape(q:       "", 
+             grantor: "-All-", 
+             trade:   "-All-", 
+             region:  "-All-")
 
     response = Net::HTTP.post_form(URI.parse(@url),
                                                   {"q"       => q,
@@ -51,8 +54,13 @@ class RoyalWarrantScraper
     royal_warrant_holders
   end
 
-  def scrape_to_csv(file_path, q="", grantor="-All-", trade="-All-", region="-All-")
-    write_to_csv(file_path, scrape(q, grantor, trade, region))
+  def scrape_to_csv(file_path, 
+                    q:       "",
+                    grantor: "-All-", 
+                    trade:   "-All-", 
+                    region:  "-All-"
+                    )
+    write_to_csv(file_path, scrape(q: q, grantor: grantor, trade: trade, region: region))
   end
 
 
