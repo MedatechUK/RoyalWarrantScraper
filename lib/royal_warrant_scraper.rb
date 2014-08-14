@@ -78,6 +78,7 @@ class RoyalWarrantScraper
       entries.each { |entry| csv << entry.to_a }
     end
   end
+
 end
 
 
