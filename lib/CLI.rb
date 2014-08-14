@@ -24,9 +24,11 @@ class RoyalWarrantCLI < Thor
 
     out = options[:outfile] || "output/#{trade}.csv"
 
+    Dir.mkdir("output") unless File.exists?("output") || options[:outfile]
+    
     if rws.trades.include? trade
       rws.scrape_to_csv(out, trade: trade)
-      puts "Scraped to: output/#{trade}.csv"
+      puts "Scraped to: #{out}"
     else
       puts "Malformed input, try scrape help"
     end 
