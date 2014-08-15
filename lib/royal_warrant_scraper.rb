@@ -20,23 +20,31 @@ class RoyalWarrantScraper
              trade:   "-All-", 
              region:  "-All-")
 
-    response = Net::HTTP.post_form(URI.parse(@url),
-                                                  {"q"       => q,
-                                                   "grantor" => grantor,
-                                                   "trade"   => trade,
-                                                   "region"  => region})
-                                                  .body.encode("UTF-8", invalid: :replace, undef: :replace, replace: "")
+    response = Net::HTTP.post_form(
+                          URI.parse(@url),
+                            {"q"       => q,
+                             "grantor" => grantor,
+                             "trade"   => trade,
+                             "region"  => region})
+                              .body.encode(
+                                    "UTF-8", 
+                                    invalid: :replace, 
+                                    undef: :replace, 
+                                    replace: "")
+
     html = Nokogiri::HTML(response)
 
     #look for the div with results text, grab the proceeding table element
-    search_results = html.xpath("//div[text() = 'Results of your search:']")[0].next_element
+    search_results = 
+      html.xpath("//div[text() = 'Results of your search:']")[0].next_element
 
     royal_warrant_holders = []
 
     search_results.xpath("tr").each do |tr|
       next if tr.css("h2").size == 0
       name = tr.css("h2").text
-      description = tr.css("div")[0].xpath("text()").to_s.strip!.gsub!("\n", "<break>")
+      description = tr.css("div")[0].xpath("text()").to_s.strip!.gsub!("\n", 
+                                                                  "<break>")
       phone = tr.xpath(".//td[text() = 'Phone:']")[0].next_element.text
       fax = tr.xpath(".//td[text() = 'Fax:']")[0].next_element.text
       email = tr.xpath(".//td[text() = 'Email:']")[0].next_element.text
@@ -60,27 +68,34 @@ class RoyalWarrantScraper
                     trade:   "-All-", 
                     region:  "-All-"
                     )
-    write_to_csv(file_path, scrape(q: q, grantor: grantor, trade: trade, region: region))
+
+    write_to_csv(file_path, scrape(q:       q, 
+                                   grantor: grantor, 
+                                   trade:   trade, 
+                                   region:  region))
   end
 
 
   private
   def get_trades
     response = Nokogiri::HTML(Net::HTTP.get_response(URI.parse(@url)).body)
-    response.css("select[name='trade']/option").each { |option| @trades << option["value"] }
+    response.css("select[name='trade']/option").each { 
+                                        |option| @trades << option["value"] }
   end
 
   def write_to_csv(file_path, entries)
     CSV.open(file_path, "w",
              write_headers: true,
-             headers: ["name", "description", "phone", "fax", "email", "website"]
+             headers: ["name", 
+                       "description", 
+                       "phone", 
+                       "fax", 
+                       "email", 
+                       "website"]
              ) do |csv|
       entries.each { |entry| csv << entry.to_a }
     end
   end
 
 end
-
-
-
 

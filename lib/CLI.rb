@@ -14,7 +14,10 @@ class RoyalWarrantCLI < Thor
   default_task :interactive
 
   # trade command - scrapes by trade (number or name)
-  desc "trade NAME_OR_NUMBER", "Scrape company names with trade name or number per trade_list command"
+  desc "trade NAME_OR_NUMBER", 
+  "Scrape company names with trade name or number per trade_list command. 
+  Usage: trade {name_or_number} to specify the trade to scrape for
+  Usage: --outfile {filename} to specify a non-default output"
   option :outfile, :type => :string
 
   def trade(trade)
@@ -37,7 +40,9 @@ class RoyalWarrantCLI < Thor
 
   #trade list command - pulls down trades & outputs.
 
-  desc "trade_list", "Scrape available trades to perform a company scrape against." 
+  desc "trade_list", 
+  "Scrape available trades to perform a company scrape against.
+  Usage: trade_list" 
 
   def trade_list
     rws = RoyalWarrantScraper.new 
@@ -47,10 +52,13 @@ class RoyalWarrantCLI < Thor
 
   #default task - run the scraper interactively
 
-  desc "interactive", "Default method - runs scraper interactively if no args given", hide: true
+  desc "interactive", 
+  "Default method - runs scraper interactively if no args given", 
+  hide: true
 
   def interactive
-    say "No arguments received. Default output path will be used (output/{trade}.csv)."
+    say "No arguments received. Default output path will be used:
+    (output/{trade}.csv)."
     say "Retrieving trades... Please choose from the following:"
 
     rws = RoyalWarrantScraper.new 
